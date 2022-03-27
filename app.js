@@ -191,7 +191,7 @@ app.post("/users", (req, res) => {
 });
 // end users
 
-
-app.listen(5000, () => {
-  console.log("server is listening...");
+const port = process.env.PORT || 5000
+app.listen(port, () => {
+  console.log(`server is listening on Port: ${port}`);
 });
