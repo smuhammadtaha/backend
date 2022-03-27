@@ -33,8 +33,6 @@ app.get("/categories", (req, res) => {
   });
 });
 
-app.use(express.json());
-
 app.post("/categories", (req, res) => {
 
   let newcategory = new categoryModel(req.body);
