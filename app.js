@@ -36,12 +36,6 @@ app.get("/categories", (req, res) => {
 app.use(express.json());
 
 app.post("/categories", (req, res) => {
- // let obj = {
-    // cat_name: req.body,
-    // cat_description: req.body,
-    // cat_img: req.body
- // };
-//  console.log(req.body)
 
   let newcategory = new categoryModel(req.body);
   newcategory.save((err, result) => {
